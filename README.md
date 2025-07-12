@@ -4,5 +4,5 @@ Fitness( related project)
 DO NOT PUSH CODE WITH ERRORS !!!!!!!
 </div>
 <div>
-THANK YOU   !!!!!!
+THANK YOU DIGNYA  !!!!!!
 </div>
