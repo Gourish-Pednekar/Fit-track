@@ -11,19 +11,25 @@
   <header>
     <h1>Welcome to Gym-Buddy</h1>
   </header>
+  <video autoplay muted loop id="bg-video">
+    <source src="media/bgvid.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-  <nav>
-    <a href="planner.html">Planner</a>
-    <a href="tracker.html">Tracker</a>
-  </nav>
+  <div class="overlay">
 
-  <div class="container">
-    <p class="welcome">Your personal gym companion to plan, track, and stay informed.</p>
-
-    <div class="btn-auth">
-      <button onclick="location.href='login'">Log In / Sign Up</button>
-      <button onclick="location.href='register-gym.html'">Register as Gym</button>
+    <div class="top-buttons">
+      <a href="planner" class="top-btn left">Planner</a>
+      <a href="tracker" class="top-btn right">Tracker</a>
     </div>
+
+    <div class="credential-box">
+        <div class="btn-auth">
+        <button onclick="location.href='/login'">Log In</button>
+        <button onclick="location.href='/register-gym'">Register as Gym</button>
+      </div>
+    </div>
+
 
     <div class="welcome-para">
         <p> Check if your gym is crowded before you go! Gym-Buddy connects you with real-time crowd status using smart technology, helping you avoid peak hours and 
