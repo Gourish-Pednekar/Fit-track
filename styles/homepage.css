@@ -44,7 +44,7 @@
       font-size: 16px;
       border: none;
       border-radius: 5px;
-      background-color: #28a745;
+      background-color: #111211;
       color: rgb(62, 61, 61);
       cursor: pointer;
       margin: 5px;
@@ -59,8 +59,10 @@
     .welcome-para {
       width: auto;
       padding: 20px;
+      color: white; 
       overflow-x: auto;
       white-space: nowrap;
+      font-weight: bold;
     }
     body, html {
   height: 100%;
@@ -79,15 +81,14 @@
 }
 header {
   position: relative;
-  background: rgba(255, 255, 255, 0.018);
-  color: rgb(62, 61, 61);
+  background: rgba(0, 0, 0, 0.5); 
+  color: white; 
   text-align: center;
   padding: 20px;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-/* 🌟 Overlay Container */
 .overlay {
   position: relative;
   height: 100vh;
@@ -97,7 +98,6 @@ header {
   align-items: center;
 }
 
-/* 📍 Top Buttons */
 .top-buttons {
   position: absolute;
   top: 20px;
@@ -107,8 +107,8 @@ header {
   padding: 0 50px;
 }
 .top-btn {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white; 
   padding: 10px 20px;
   border-radius: 10px;
   backdrop-filter: blur(8px);
@@ -117,10 +117,12 @@ header {
   border: 1px solid white;
 }
 
-/* 💬 Welcome Message */
+
 .credential-box {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 40px;
+background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  max-width: 300px; 
+  width: 90%; 
   border-radius: 20px;
   text-align: center;
   color: white;
@@ -134,28 +136,29 @@ header {
   margin-bottom: 30px;
 }
 
-/* 🔘 Buttons */
 .btn-auth button {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
   font-size: 16px;
+  font-weight: bold;
   margin: 10px;
   padding: 12px 25px;
-  border: 1px solid white;
+  border: 1px solid rgb(32, 32, 32);
   border-radius: 8px;
   cursor: pointer;
   backdrop-filter: blur(10px);
   transition: 0.3s ease;
 }
 .btn-auth button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.5); 
   transform: scale(1.05);
 }
 footer {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.5); 
   color: white;
   padding: 15px;
   text-align: center;
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255,255,255,0.3);
+  font-weight: bold;
 }
