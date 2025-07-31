@@ -154,11 +154,141 @@ background-color: rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
 footer {
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 15px;
   text-align: center;
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255,255,255,0.3);
   font-weight: bold;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.top-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.top-right {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.center-box {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.bottom-left {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.bottom-right {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+
+.feature-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+  width: 180px;
+  height: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+
+.feature-box img {
+  width: 100%;
+  height: 120px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.center-box {
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+.popup.hidden, .blur.hidden { display: none; }
+.blur {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 2rem;
+  z-index: 2;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+
+.popup-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+.popup-content.vertical button, 
+.popup-content.vertical input, 
+.popup-content.vertical select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.equipment-entry {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+#gym-popup .popup-content.vertical {
+  width: 500px;   
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.equipment-entry {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.equipment-entry input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
 }

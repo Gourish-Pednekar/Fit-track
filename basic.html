@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gym-Buddy</title>
   <link rel ="stylesheet" href="styles/homepage.css" />
+  <script src="js/login.js"></script>
 </head>
 <body>
-
   <header>
     <h1>Welcome to Gym-Buddy</h1>
   </header>
@@ -15,32 +15,85 @@
     <source src="media/bgvid.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
-
   <div class="overlay">
-
-    <div class="top-buttons">
-      <a href="planner.html" class="top-btn left">Planner</a>
-      <a href="tracker.html" class="top-btn right">Tracker</a>
-    </div>
-
-    <div class="credential-box">
-        <div class="btn-auth">
-        <button onclick="location.href='/login'">Log In</button>
-        <button onclick="location.href='/register-gym'">Register as Gym</button>
+  <div class="feature-grid">
+  <div class="feature-box top-left">
+    <img src="media/crowd.jpg" alt="Crowd" />
+    <p>Live Crowd Tracker</p>
+  </div>
+  <div class="feature-box top-right">
+    <img src="media/influencer.avif" alt="influencer" />
+    <p>Influencer Section</p>
+  </div>
+  <div class="credential-box center-box">
+    <div class="btn-auth">
+  <button onclick="openRolePopup()">Log In</button>
+  <button onclick="openGymPopup()">Register as Gym</button>
+</div>  
+  </div>
+  <div class="feature-box bottom-left">
+    <img src="media/planner.avif" alt="planner" />
+    <p>Workout Planner</p>
+  </div>
+  <div class="feature-box bottom-right">
+    <img src="media/tracker.jpg" alt="tracker" />
+    <p>Track Your Progress</p>
+  </div>
+</div>
+  </div>
+<div id="role-popup" class="popup hidden">
+  <div class="popup-content vertical">
+    <h2>Login As</h2>
+    <button onclick="openLoginPopup('member')">Member</button>
+    <button onclick="openLoginPopup('influencer')">Influencer</button>
+    <button onclick="openLoginPopup('gym-admin')">Gym Admin</button>
+    <button onclick="openSignUpPopup()">Sign Up</button>
+    <button onclick="closePopup('role-popup')">Close</button>
+  </div>
+</div>
+<div id="login-popup" class="popup hidden">
+  <div class="popup-content vertical">
+    <h2 id="login-role-title"></h2>
+    <input type="text" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Log In</button>
+    <button onclick="closePopup('login-popup')">Close</button>
+  </div>
+</div>
+<div id="signup-popup" class="popup hidden">
+  <div class="popup-content vertical">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-email" placeholder="Email">
+    <input type="password" id="signup-password" placeholder="Password">
+    <select id="signup-role">
+      <option value="member">Member</option>
+      <option value="influencer">Influencer</option>
+      <option value="gym-admin">Gym Admin</option>
+    </select>
+    <button onclick="register()">Sign Up</button>
+    <button onclick="closePopup('signup-popup')">Close</button>
+  </div>
+</div>
+<div id="blur-overlay" class="blur hidden"></div>
+<div id="gym-popup" class="popup hidden">
+  <div class="popup-content vertical">
+    <h2>Register Your Gym</h2>
+    <input type="text" id="gym-name" placeholder="Gym Name" />
+     <input type="email" id="gym-admin-email" placeholder="Gym Admin Email" />
+    <input type="password" id="gym-admin-password" placeholder="Set Password" />
+    <div id="equipment-list">
+      <div class="equipment-entry">
+        <input type="text" placeholder="Equipment Name" class="equipment-name" />
+        <input type="text" placeholder="Muscles Targeted" class="equipment-muscle" />
       </div>
     </div>
-
-
-    <div class="welcome-para">
-        <p> Check if your gym is crowded before you go! Gym-Buddy connects<br>
-           you with real-time crowd status using smart technology,<br>
-            helping you avoid peak hours and make the most of your workout.</p>
-    </div>
+    <button onclick="addEquipment()">+ Add More Equipment</button>
+    <button onclick="registerGym()">Register Gym</button>
+    <button onclick="closePopup('gym-popup')">Close</button>
   </div>
-
+</div>
   <footer>
     <p> Gym-Buddy aims to make your fitness journey smarter by combining workout planning, progress tracking, and real-time gym occupancy updates. Train smarter, not harder.</p>
   </footer>
-
 </body>
 </html>
