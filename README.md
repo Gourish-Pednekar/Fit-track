@@ -3,6 +3,3 @@ Fitness( related project)
 <div>
 DO NOT PUSH CODE WITH ERRORS !!!!!!!
 </div>
-<div>
-THANK YOU DIGNYA  !!!!!!
-</div>
